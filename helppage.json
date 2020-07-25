@@ -1,0 +1,13 @@
+{
+    "Help":
+    [
+        "COMMANDS:",
+        "\n!!!All commands must be written lowercase cuz I'm lazy!!!",
+        "\n!cor - Outputs the current corruption vendor rotation",
+        "\n!cor next - Outputs the next cycle, add next up to 3 times",
+        "\n! - Add any corruption name after an exclamation mark and",
+        "\nfind out when the corruption ranks will be available",
+        "\n!roll - Roll to show your gayness, multiple rolls = highest counts",
+        "\nxd"
+    ]
+}

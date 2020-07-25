@@ -1,0 +1,78 @@
+{
+    "rotationOne": 
+    [
+        "Masterful I, 3000",
+        "\nVoid Ritual I, 4125",
+        "\nDeadly Momentum II, 5000",
+        "\nSiphoner II, 6300",
+        "\nIneffable Truth II, 6750",
+        "\nVersatile III, 5000",
+        "\nAvoidant II, 3300"
+    ],
+    "rotationTwo": 
+    [
+        "Infinite Stars I: 5000",
+        "\nSurging Vitality I: 4125",
+        "\nGlimpse of Clarity: 4125",
+        "\nSevere II: 4125",
+        "\nRacing Pulse III: 7875",
+        "\nSiphoner III: 9000",
+        "\nAvoidant III: 4250"
+    ],
+    "rotationThree": 
+    [
+        "Severe I: 3000",
+        "\nSiphoner I: 4250",
+        "\nExpedient II: 4125",
+        "\nTwilight Devastation II: 10000",
+        "\nHoned Mind III: 7875",
+        "\nStrikethrough III: 5000"
+    ],
+    "rotationFour": 
+    [
+        "Expedient I: 3000",
+        "\nSevere III: 5000",
+        "\nTwisted Appendage I: 3000",
+        "\nRacing Pulse II: 5000",
+        "\nEchoing Void II: 7875",
+        "\nInfinite Stars III: 15000"
+    ],
+    "rotationFive": 
+    [
+        "Racing Pulse I: 4125",
+        "\nMasterful III: 5000",
+        "\nStrikethrough I: 3000",
+        "\nVoid Ritual II: 7875",
+        "\nAvoidant I: 2400",
+        "\nSurging Vitality II: 5000",
+        "\nTwilight Devastation III: 15000"
+    ],
+    "rotationSix": 
+    [
+        "Echoing Void I: 6250",
+        "\nVersatile I: 3000",
+        "\nHoned Mind II: 5000",
+        "\nInfinite Stars II: 10000",
+        "\nDeadly Momentum III: 7875",
+        "\nVoid Ritual III: 13200",
+        "\nGushing Wound: 4125"
+    ],
+    "rotationSeven": 
+    [
+        "Twilight Devastation I: 6250",
+        "\nSurging Vitality III: 7875",
+        "\nEchoing Void III: 12000",
+        "\nDeadly Momentum I: 4125",
+        "\nVersatile II: 4125",
+        "\nTwisted Appendage II: 7875"
+    ],
+    "rotationEight": 
+    [
+        "Ineffable Truth I: 3300",
+        "\nHoned Mind I: 4125",
+        "\nStrikethrough II: 4125",
+        "\nMasterful II: 4125",
+        "\nExpedient III: 5000",
+        "\nTwisted Appendage III: 13200"
+    ]
+}

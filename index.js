@@ -257,6 +257,7 @@ client.on('message', (message) => {
             await message.react('736990100663304232');
             await message.react('736990085609816084');
             await message.react('736990051149545472');
+            await message.react('736990068413300786');
             const tankFilter = (reaction, user) => {
                 return reaction.emoji.id === '736990100663304232' && user.id != client.user;
             };
@@ -276,16 +277,25 @@ client.on('message', (message) => {
             const cancelCollector = message.createReactionCollector(cancelFilter, { time: 345600000 });
 
             tankCollector.on('collect', (reaction, user) => {
-                message.edit(message.content + '\n<:tank:736990100663304232>' + '<@' + user + '>\n');
+                if(!message.content.includes(user)){
+                    message.edit(message.content + '\n<:tank:736990100663304232>' + '<@' + user + '>\n');
+                }
             });
             healCollector.on('collect', (reaction, user) => {
-                message.edit(message.content + '\n<:heal:736990085609816084>' + '<@' + user + '>\n');
+                if(!message.content.includes(user)){
+                    message.edit(message.content + '\n<:heal:736990085609816084>' + '<@' + user + '>\n');
+                }
             });
             dpsCollector.on('collect', (reaction, user) => {
-                message.edit(message.content + '\n<:dps:736990051149545472>' + '<@' + user + '>\n');
+                if(!message.content.includes(user)){
+                    message.edit(message.content + '\n<:dps:736990051149545472>' + '<@' + user + '>\n');
+                }
             });
             cancelCollector.on('collect', (reaction, user) => {
-                message.delete();
+                if(user == '100267154837872640'){
+                    message.delete();
+                }
+
             });
 
         

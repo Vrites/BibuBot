@@ -50,7 +50,7 @@ client.on('message', (message) => {
                 return;
             }
             const vendorData = JSON.parse(jsonString);
-            message.channel.send('```' + vendorData.rotationThree + '```');
+            message.channel.send('```' + vendorData.rotationFour + '```');
         })
     }
 });
@@ -63,7 +63,7 @@ client.on('message', (message) => {
                 return;
             }
             const vendorData = JSON.parse(jsonString);
-            message.channel.send('```' + vendorData.rotationFour + '```');
+            message.channel.send('```' + vendorData.rotationFive + '```');
         })
     }
 });
@@ -76,7 +76,7 @@ client.on('message', (message) => {
                 return;
             }
             const vendorData = JSON.parse(jsonString);
-            message.channel.send('```' + vendorData.rotationFive + '```');
+            message.channel.send('```' + vendorData.rotationSix + '```');
         })
     }
 });
@@ -89,7 +89,7 @@ client.on('message', (message) => {
                 return;
             }
             const vendorData = JSON.parse(jsonString);
-            message.channel.send('```' + vendorData.rotationSix + '```');
+            message.channel.send('```' + vendorData.rotationSeven + '```');
         })
     }
 });

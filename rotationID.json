@@ -1,21 +1,19 @@
 {
     "TD": 
     [
-        "Twilight Devastation I: 6250 | Elokuu 8. |August 8th |",
-        "\nTwilight Devastation II: 10000 | Elokuu 22. | August 22nd |",
-        "\nTwilight Devastation III: 15000 | Elokuu 1. | August 1st |"
+        "Twilight Devastation I: 6250 | Elokuu 8. |August 8th |\nTwilight Devastation II: 10000 | Elokuu 22. | August 22nd |\nTwilight Devastation III: 15000 | Elokuu 1. | August 1st |"
     ],
     "Severe":
     [
         "Severe I: 3000 | Elokuu 22. | August 22nd |",
         "\nSevere II: 4125 | Elokuu 19. | August 19th |",
-        "\nSevere III: 5000 | Heinäkuu 29. | July 29th |"
+        "\nSevere III: 5000 | Elokuu 26. | August 26th |"
     ],
     "IS":
     [
         "Infinite Stars I: 5000 | Elokuu 19. | August 19th |",
         "\nInfinite Stars II: 10000 | Elokuu 5. | August 5th |",
-        "\nInfinite Stars III: 15000 | Heinäkuu 29. | July 29th |"
+        "\nInfinite Stars III: 15000 | Elokuu 26. | August 26th |"
     ],
     "Versatile":
     [
@@ -25,13 +23,13 @@
     ],
     "Expedient":
     [
-        "Expedient I: 3000 | Heinäkuu 29. | July 29th |",
+        "Expedient I: 3000 | Elokuu 26. | August 26th |",
         "\nExpedient II: 4125 | Elokuu 22. | August 22nd |",
         "\nExpedient III: 5000 | Elokuu 12. | August 12th |"
     ],
     "MindFlay":
     [
-        "Twisted Appendage I: 3000 | Heinäkuu 29. | July 29th |",
+        "Twisted Appendage I: 3000 | Elokuu 26. | August 26th |",
         "\nTwisted Appendage II: 7875 | Elokuu 8. | August 8th |",
         "\nTwisted Appendage III: 13200 | Elokuu 12. | August 12th |"
     ],

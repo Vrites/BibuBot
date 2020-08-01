@@ -232,7 +232,7 @@ client.on('message', (message) => {
                 return;
             }
             const vendorData = JSON.parse(jsonString);
-            message.channel.send('```' + vendorData.Striketthrough + '```');
+            message.channel.send('```' + vendorData.Strikethrough + '```');
         })
     }
 });

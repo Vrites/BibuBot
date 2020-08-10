@@ -20,7 +20,7 @@ client.on('ready', () => {
 
 // ------------------COMMAND HANDLER---------------
 client.on('message', message => {
-	if (!message.content.startsWith(prefix) || message.author.bot) return;
+	if (!message.content.startsWith(prefix) || message.author.bot || message.channel.id != '470571630242955264') return;
 	const args = message.content.slice(prefix.length).trim().split(/ +/);
 	const command = args.shift().toLowerCase();
 

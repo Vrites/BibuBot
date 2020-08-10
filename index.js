@@ -1,253 +1,43 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-let fs = require('fs');
-let date = new Date();
+const fs = require('fs');
+const {
+	prefix,
+} = require('./config.json');
 
-client.setMaxListeners(20);
+client.commands = new Discord.Collection();
 
-client.on('ready', () => {
-    console.log('I am online');
-    let day = date.getUTCDay();
-    let hours = date.getUTCHours();
-    console.log(day + ' ' + hours);
-})
+const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
+for (const file of commandFiles) {
+	const command = require(`./commands/${file}`);
 
-//------------------HELP----------------------
-
-client.on('message', (message) => {
-    if(message.content == '!help') {
-        fs.readFile('./helppage.json', 'utf8', (err, jsonString) => {
-            if(err){
-                console.log("Error: " + err);
-                return;
-            }
-            const vendorData = JSON.parse(jsonString);
-            message.channel.send('```' + vendorData.Help + '```');
-        });
-    }
-});
-
-//-------------------ROLL----------------------
-
-client.on('message', (message) => {
-    if(message.content == '!roll'){
-        let rolledNumber = getRandomInt(100);
-        message.channel.send('<@'+ message.author.id + '> rolled: ' + rolledNumber);
-    }
-})
-
-function getRandomInt(max) {
-    return Math.floor(Math.random() * Math.floor(max));
+	client.commands.set(command.name, command);
 }
 
-//------------------CORRUPTION COMMANDS---------------------------
-
-client.on('message', (message) => {
-    if(message.content == '!cor') {
-        fs.readFile('./vendor.json', 'utf8', (err, jsonString) => {
-            if(err){
-                console.log("Error: " + err);
-                return;
-            }
-            const vendorData = JSON.parse(jsonString);
-            message.channel.send('```' + vendorData.rotationSix + '```');
-        });
-    }
+client.on('ready', () => {
+	console.log('Client: Online');
 });
 
-client.on('message', (message) => {
-    if(message.content == '!cor next') {
-        fs.readFile('./vendor.json', 'utf8', (err, jsonString) => {
-            if(err){
-                console.log("Error: " + err);
-                return;
-            }
-            const vendorData = JSON.parse(jsonString);
-            message.channel.send('```' + vendorData.rotationSeven + '```');
-        });
-    }
-});
+// ------------------COMMAND HANDLER---------------
+client.on('message', message => {
+	if (!message.content.startsWith(prefix) || message.author.bot) return;
+	const args = message.content.slice(prefix.length).trim().split(/ +/);
+	const command = args.shift().toLowerCase();
 
-client.on('message', (message) => {
-    if(message.content == '!cor next next') {
-        fs.readFile('./vendor.json', 'utf8', (err, jsonString) => {
-            if(err){
-                console.log("Error: " + err);
-                return;
-            }
-            const vendorData = JSON.parse(jsonString);
-            message.channel.send('```' + vendorData.rotationEight + '```');
-        });
-    }
-});
-
-client.on('message', (message) => {
-    if(message.content == '!cor next next next') {
-        fs.readFile('./vendor.json', 'utf8', (err, jsonString) => {
-            if(err){
-                console.log("Error: " + err);
-                return;
-            }
-            const vendorData = JSON.parse(jsonString);
-            message.channel.send('```' + vendorData.rotationOne + '```');
-        });
-    }
-});
-
-client.on('message', (message) => {
-    if(message.content == '!severe') {
-        fs.readFile('./rotationID.json', 'utf8', (err, jsonString) => {
-            if(err){
-                console.log("Error: " + err);
-                return;
-            }
-            const vendorData = JSON.parse(jsonString);
-            message.channel.send('```' + vendorData.Severe + '```');
-        });
-    }
-});
-
-client.on('message', (message) => {
-    if(message.content == '!infinite stars' || message.content == '!is') {
-        fs.readFile('./rotationID.json', 'utf8', (err, jsonString) => {
-            if(err){
-                console.log("Error: " + err);
-                return;
-            }
-            const vendorData = JSON.parse(jsonString);
-            message.channel.send('```' + vendorData.IS + '```');
-        });
-    }
-});
-
-client.on('message', (message) => {
-    if(message.content == '!masterful') {
-        fs.readFile('./rotationID.json', 'utf8', (err, jsonString) => {
-            if(err){
-                console.log("Error: " + err);
-                return;
-            }
-            const vendorData = JSON.parse(jsonString);
-            message.channel.send('```' + vendorData.Masterful + '```');
-        });
-    }
-});
-
-client.on('message', (message) => {
-    if(message.content == '!ineffable truth' || message.content == '!ineffable') {
-        fs.readFile('./rotationID.json', 'utf8', (err, jsonString) => {
-            if(err){
-                console.log("Error: " + err);
-                return;
-            }
-            const vendorData = JSON.parse(jsonString);
-            message.channel.send('```' + vendorData.Ineffable + '```');
-        });
-    }
-});
-
-client.on('message', (message) => {
-    if(message.content == '!twilight devastation' || message.content == '!td') {
-        fs.readFile('./rotationID.json', 'utf8', (err, jsonString) => {
-            if(err){
-                console.log("Error: " + err);
-                return;
-            }
-            const vendorData = JSON.parse(jsonString);
-            message.channel.send('```' + vendorData.TD + '```');
-        });
-    }
-});
-
-client.on('message', (message) => {
-    if(message.content == '!versatile') {
-        fs.readFile('./rotationID.json', 'utf8', (err, jsonString) => {
-            if(err){
-                console.log("Error: " + err);
-                return;
-            }
-            const vendorData = JSON.parse(jsonString);
-            message.channel.send('```' + vendorData.Versatile + '```');
-        });
-    }
-});
-
-client.on('message', (message) => {
-    if(message.content == '!expedient') {
-        fs.readFile('./rotationID.json', 'utf8', (err, jsonString) => {
-            if(err){
-                console.log("Error: " + err);
-                return;
-            }
-            const vendorData = JSON.parse(jsonString);
-            message.channel.send('```' + vendorData.Expedient + '```');
-        });
-    }
-});
-
-client.on('message', (message) => {
-    if(message.content == '!twisted appendage' || message.content == '!mind flay') {
-        fs.readFile('./rotationID.json', 'utf8', (err, jsonString) => {
-            if(err){
-                console.log("Error: " + err);
-                return;
-            }
-            const vendorData = JSON.parse(jsonString);
-            message.channel.send('```' + vendorData.MindFlay + '```');
-        });
-    }
-});
-
-client.on('message', (message) => {
-    if(message.content == '!void ritual') {
-        fs.readFile('./rotationID.json', 'utf8', (err, jsonString) => {
-            if(err){
-                console.log("Error: " + err);
-                return;
-            }
-            const vendorData = JSON.parse(jsonString);
-            message.channel.send('```' + vendorData.VoidRitual + '```');
-        });
-    }
-});
-
-client.on('message', (message) => {
-    if(message.content == '!gushing wound' || message.content == '!gw') {
-        fs.readFile('./rotationID.json', 'utf8', (err, jsonString) => {
-            if(err){
-                console.log("Error: " + err);
-                return;
-            }
-            const vendorData = JSON.parse(jsonString);
-            message.channel.send('```' + vendorData.GW + '```');
-        });
-    }
-});
-
-client.on('message', (message) => {
-    if(message.content == '!strikethrough') {
-        fs.readFile('./rotationID.json', 'utf8', (err, jsonString) => {
-            if(err){
-                console.log("Error: " + err);
-                return;
-            }
-            const vendorData = JSON.parse(jsonString);
-            message.channel.send('```' + vendorData.Strikethrough + '```');
-        });
-    }
-});
-
-client.on('message', (message) => {
-    if(message.content == '!avoidant') {
-        fs.readFile('./rotationID.json', 'utf8', (err, jsonString) => {
-            if(err){
-                console.log("Error: " + err);
-                return;
-            }
-            const vendorData = JSON.parse(jsonString);
-            message.channel.send('```' + vendorData.Avoidant + '```');
-        });
-    }
+	switch (command) {
+	case 'help':
+		client.commands.get('help').execute(message);
+		break;
+	case 'cor':
+		client.commands.get('currentCorruptionRota').execute(message, args);
+		break;
+	case 'set':
+		client.commands.get('setRotationID').execute(message, args);
+		break;
+	case 'roll':
+		client.commands.get('roll').execute(message);
+		break;
+	}
 });
 
 // client.on('message', (message) => {
@@ -298,7 +88,6 @@ client.on('message', (message) => {
 
 //             });
 
-        
 //         });
 
 //     }

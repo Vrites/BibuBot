@@ -1,0 +1,14 @@
+{
+    "prefix": "!",
+    "corVendorRotation": 2,
+    "corVendorRotationRef": [
+      "rotationOne",
+      "rotationTwo",
+      "rotationThree",
+      "rotationFour",
+      "rotationFive",
+      "rotationSix",
+      "rotationSeven",
+      "rotationEight"
+    ]
+  }

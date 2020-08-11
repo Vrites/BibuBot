@@ -1,11 +1,13 @@
 module.exports = {
 	name: 'currentCorruptionRota',
 	description: 'Display the current corruption rotation.',
-	execute(message, args) {
+	execute(message, args, wednesdaySetRota, saturdaySetRota) {
 		const corJson = require('../vendor.json');
 		let { corVendorRotation } = require('../config.json');
 		const { corVendorRotationRef } = require('../config.json');
 		const specificCorruption = require('../rotationID.json');
+		const nextRotaOne = wednesdaySetRota.nextInvocation();
+		const nextRotaTwo = saturdaySetRota.nextInvocation();
 		console.log(args);
 		if(!args.length) {
 			return message.channel.send('```' + corJson[corVendorRotationRef[corVendorRotation]] + '```');
@@ -17,7 +19,7 @@ module.exports = {
 			else {
 				corVendorRotation++;
 			}
-			return message.channel.send('```' + corJson[corVendorRotationRef[corVendorRotation]] + '```');
+			return message.channel.send('```' + corJson[corVendorRotationRef[corVendorRotation]] + '\n\n' + 'Next rotations:\n' + nextRotaOne + '\n' + nextRotaTwo + '```');
 		}
 		switch (args[0]) {
 		case 'infinitestars':

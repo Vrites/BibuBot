@@ -1,9 +1,8 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const fs = require('fs');
-const {
-	prefix,
-} = require('./config.json');
+const schedule = require('node-schedule');
+const { prefix } = require('./config.json');
 
 client.commands = new Discord.Collection();
 
@@ -18,6 +17,40 @@ client.on('ready', () => {
 	console.log('Client: Online');
 });
 
+const wednesdaySetRota = schedule.scheduleJob('10 * * 3', function() {
+	const configJSON = require('./config.json');
+	const { corVendorRotation } = require('./config.json');
+	if(corVendorRotation < 7) {
+		configJSON.corVendorRotation = corVendorRotation + 1;
+	}
+	else {
+		configJSON.corVendorRotation = 0;
+	}
+	fs.writeFile('./config.json', JSON.stringify(configJSON, null, 2), function writeJSON(err) {
+		if(err) return console.log(err);
+		console.log(JSON.stringify(configJSON));
+		console.log('Setting rotation ID in config.json');
+	});
+	console.log('Rotation changed to: ' + configJSON.corVendorRotation);
+});
+
+const saturdaySetRota = schedule.scheduleJob('22 * * 6', function() {
+	const configJSON = require('./config.json');
+	const { corVendorRotation } = require('./config.json');
+	if(corVendorRotation < 7) {
+		configJSON.corVendorRotation = corVendorRotation + 1;
+	}
+	else {
+		configJSON.corVendorRotation = 0;
+	}
+	fs.writeFile('./config.json', JSON.stringify(configJSON, null, 2), function writeJSON(err) {
+		if(err) return console.log(err);
+		console.log(JSON.stringify(configJSON));
+		console.log('Setting rotation ID in config.json');
+	});
+	console.log('Rotation changed to: ' + configJSON.corVendorRotation);
+});
+
 // ------------------COMMAND HANDLER---------------
 client.on('message', message => {
 	if (!message.content.startsWith(prefix) || message.author.bot || message.channel.id != '470571630242955264') return;
@@ -29,7 +62,7 @@ client.on('message', message => {
 		client.commands.get('help').execute(message);
 		break;
 	case 'cor':
-		client.commands.get('currentCorruptionRota').execute(message, args);
+		client.commands.get('currentCorruptionRota').execute(message, args, wednesdaySetRota, saturdaySetRota);
 		break;
 	case 'set':
 		client.commands.get('setRotationID').execute(message, args);

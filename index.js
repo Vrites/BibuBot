@@ -17,7 +17,7 @@ client.on('ready', () => {
 	console.log('Client: Online');
 });
 
-const wednesdaySetRota = schedule.scheduleJob('10 * * 3', function() {
+const wednesdaySetRota = schedule.scheduleJob('7 * * 3', function() {
 	const configJSON = require('./config.json');
 	const { corVendorRotation } = require('./config.json');
 	if(corVendorRotation < 7) {
@@ -34,7 +34,7 @@ const wednesdaySetRota = schedule.scheduleJob('10 * * 3', function() {
 	console.log('Rotation changed to: ' + configJSON.corVendorRotation);
 });
 
-const saturdaySetRota = schedule.scheduleJob('22 * * 6', function() {
+const saturdaySetRota = schedule.scheduleJob('19 * * 6', function() {
 	const configJSON = require('./config.json');
 	const { corVendorRotation } = require('./config.json');
 	if(corVendorRotation < 7) {

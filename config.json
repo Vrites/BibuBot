@@ -1,6 +1,6 @@
 {
     "prefix": "!",
-    "corVendorRotation": 0,
+    "corVendorRotation": 2,
     "corVendorRotationRef": [
       "rotationOne",
       "rotationTwo",

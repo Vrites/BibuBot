@@ -1,15 +1,15 @@
 {
     "TD": 
     [
-        "Twilight Devastation I: 6250 | Syyskuu 2. | September 2nd |\nTwilight Devastation II: 10000 | Elokuu 22. | August 22nd |\nTwilight Devastation III: 15000 | Elokuu 29. | August 29th |"
+        "Twilight Devastation I: 6250 | Syyskuu 2. | September 2nd |\nTwilight Devastation II: 10000 | Syyskuu 16. | September 16th |\nTwilight Devastation III: 15000 | Elokuu 29. | August 29th |"
     ],
     "Severe":
     [
-        "Severe I: 3000 | Elokuu 22. | August 22nd |\nSevere II: 4125 | Elokuu 19. | August 19th |\nSevere III: 5000 | Elokuu 26. | August 26th |"
+        "Severe I: 3000 | Syyskuu 16. | September 16th |\nSevere II: 4125 | Syyskuu 12. | September 12th |\nSevere III: 5000 | Elokuu 26. | August 26th |"
     ],
     "IS":
     [
-        "Infinite Stars I: 5000 | Elokuu 19. | August 19th |\nInfinite Stars II: 10000 | Elokuu 29. | August 29th |\nInfinite Stars III: 15000 | Elokuu 26. | August 26th |"
+        "Infinite Stars I: 5000 | Syyskuu 12. | September 12th |\nInfinite Stars II: 10000 | Elokuu 29. | August 29th |\nInfinite Stars III: 15000 | Elokuu 26. | August 26th |"
     ],
     "Versatile":
     [
@@ -17,7 +17,7 @@
     ],
     "Expedient":
     [
-        "Expedient I: 3000 | Elokuu 26. | August 26th |\nExpedient II: 4125 | Elokuu 22. | August 22nd |\nExpedient III: 5000 | Syyskuu 5. | September 5th |"
+        "Expedient I: 3000 | Elokuu 26. | August 26th |\nExpedient II: 4125 | Syyskuu 16. | September 16th |\nExpedient III: 5000 | Syyskuu 5. | September 5th |"
     ],
     "MindFlay":
     [
@@ -41,14 +41,14 @@
     ],
     "Strikethrough":
     [
-        "Strikethrough I: 3000 | Elokuu 29. | August 29th |\nStrikethrough II: 4125 | Syyskuu 5. | September 5th |\nStrikethrough III: 5000 | Elokuu 22. | August 22nd |"
+        "Strikethrough I: 3000 | Elokuu 29. | August 29th |\nStrikethrough II: 4125 | Syyskuu 5. | September 5th |\nStrikethrough III: 5000 | Syyskuu 16. | September 16th |"
     ],
     "Avoidant":
     [
-        "Avoidant I: 2400 | Elokuu 29. | August 29th |\nAvoidant II: 3300 | Syyskuu 9. | September 9th |\nAvoidant III: 4250 | Elokuu 19. | August 19th |"
+        "Avoidant I: 2400 | Elokuu 29. | August 29th |\nAvoidant II: 3300 | Syyskuu 9. | September 9th |\nAvoidant III: 4250 | Syyskuu 12. | September 12th |"
 	],
 	"SurgingVitality":
 	[
-		"Surging Vitality I: 4125 | Elokuu 19. | August 19th |\nSurging Vitality II: 5000 | Elokuu 29. | August 29th |\nSurging Vitality III: 7875 | Syyskuu 5. | September 5th |\n"
+		"Surging Vitality I: 4125 | Syyskuu 12. | September 12th |\nSurging Vitality II: 5000 | Elokuu 29. | August 29th |\nSurging Vitality III: 7875 | Syyskuu 5. | September 5th |\n"
 	]
 }
